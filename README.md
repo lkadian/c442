@@ -14,17 +14,6 @@ Everything was implemented from scratch as part of a project for a compiler desi
 | Parsing           | Implementation of an LL(1) parser generator which loads the grammar found in `conf` and creates a parsing table. The token stream is then parsed using this table, producing an AST. |
 | Semantic analysis | Several checks for semantic errors/warnings like undefined variables, multiple declarations, circular dependencies, etc. as well as type checking.                                   |
 | Code generation   | Generation of "moon" assembly code, which is to be executed by the Moon processor (virtual machine).                                                                                 |
-
-
-## Usage
-
-```
-c442 [options] file...
-
--e, --exe   Execute the generated code after compilation.
--h, --help  Display this information.
-```
-
 ## Example program
 
 ```
@@ -45,6 +34,15 @@ main
     read(x);
     write(fib(x));
   end
+```
+
+## Usage
+
+```
+c442 [options] file...
+
+-e, --exe   Execute the generated code after compilation.
+-h, --help  Display this information.
 ```
 
 ## Building
