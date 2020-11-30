@@ -1,5 +1,5 @@
-#ifndef C442_GRAMMAR_H_
-#define C442_GRAMMAR_H_
+#ifndef MITH_GRAMMAR_H_
+#define MITH_GRAMMAR_H_
 
 #include <iostream>
 #include <map>
@@ -79,4 +79,4 @@ std::ostream& operator<<(std::ostream& os, const Grammar& grm);
 
 }  // namespace mith
 
-#endif  // C442_GRAMMAR_H_
+#endif  // MITH_GRAMMAR_H_

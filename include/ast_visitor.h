@@ -1,5 +1,5 @@
-#ifndef C442_AST_VISITOR_H_
-#define C442_AST_VISITOR_H_
+#ifndef MITH_AST_VISITOR_H_
+#define MITH_AST_VISITOR_H_
 
 #include "ast.h"
 
@@ -56,4 +56,4 @@ class ASTVisitor {
 
 }  // namespace mith
 
-#endif  // C442_AST_VISITOR_H_
+#endif  // MITH_AST_VISITOR_H_

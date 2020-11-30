@@ -1,5 +1,5 @@
-#ifndef C442_PARSER_H_
-#define C442_PARSER_H_
+#ifndef MITH_PARSER_H_
+#define MITH_PARSER_H_
 
 #include <memory>
 #include <stack>
@@ -46,4 +46,4 @@ class Parser {
 
 }  // namespace mith
 
-#endif  // C442_PARSER_H_
+#endif  // MITH_PARSER_H_

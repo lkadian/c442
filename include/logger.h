@@ -1,5 +1,5 @@
-#ifndef C442_LOGGER_H_
-#define C442_LOGGER_H_
+#ifndef MITH_LOGGER_H_
+#define MITH_LOGGER_H_
 
 #include <memory>
 #include <vector>
@@ -38,4 +38,4 @@ class Logger {
 
 }  // namespace mith
 
-#endif  // C442_LOGGER_H_
+#endif  // MITH_LOGGER_H_

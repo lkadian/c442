@@ -1,5 +1,5 @@
-#ifndef C442_UTIL_H_
-#define C442_UTIL_H_
+#ifndef MITH_UTIL_H_
+#define MITH_UTIL_H_
 
 #include <iostream>
 #include <set>
@@ -44,4 +44,4 @@ void PPrintSet(const std::set<T> vec) {
 }  // namespace util
 }  // namespace mith
 
-#endif  // C442_UTIL_H_
+#endif  // MITH_UTIL_H_

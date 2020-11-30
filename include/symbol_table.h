@@ -1,5 +1,5 @@
-#ifndef C442_SYMBOL_TABLE_H_
-#define C442_SYMBOL_TABLE_H_
+#ifndef MITH_SYMBOL_TABLE_H_
+#define MITH_SYMBOL_TABLE_H_
 
 #include <iostream>
 #include <map>
@@ -206,4 +206,4 @@ std::ostream& operator<<(std::ostream& os, const InheritEntry& entry);
 
 }  // namespace mith
 
-#endif  // C442_SYMBOL_TABLE_H_
+#endif  // MITH_SYMBOL_TABLE_H_

@@ -1,5 +1,5 @@
-#ifndef C442_CODE_GEN_VISITOR_H_
-#define C442_CODE_GEN_VISITOR_H_
+#ifndef MITH_CODE_GEN_VISITOR_H_
+#define MITH_CODE_GEN_VISITOR_H_
 
 #include <stack>
 #include <unordered_map>
@@ -87,4 +87,4 @@ class CodeGenVisitor : public ASTVisitor {
 
 }  // namespace mith
 
-#endif  // C442_CODE_GEN_VISITOR_H_
+#endif  // MITH_CODE_GEN_VISITOR_H_

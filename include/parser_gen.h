@@ -1,5 +1,5 @@
-#ifndef C442_PARSER_GEN_H_
-#define C442_PARSER_GEN_H_
+#ifndef MITH_PARSER_GEN_H_
+#define MITH_PARSER_GEN_H_
 
 #include <map>
 #include <set>
@@ -52,4 +52,4 @@ class ParserGenerator {
 
 }  // namespace mith
 
-#endif  // C442_PARSER_GEN_H_
+#endif  // MITH_PARSER_GEN_H_

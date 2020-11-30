@@ -1,5 +1,5 @@
-#ifndef C442_AST_H_
-#define C442_AST_H_
+#ifndef MITH_AST_H_
+#define MITH_AST_H_
 
 #include <memory>
 
@@ -376,4 +376,4 @@ class WriteNode : public ASTNode {
 
 }  // namespace mith
 
-#endif  // C442_AST_H_
+#endif  // MITH_AST_H_

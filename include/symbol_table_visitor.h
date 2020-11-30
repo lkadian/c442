@@ -1,5 +1,5 @@
-#ifndef C442_SYMBOL_TABLE_VISITOR_H_
-#define C442_SYMBOL_TABLE_VISITOR_H_
+#ifndef MITH_SYMBOL_TABLE_VISITOR_H_
+#define MITH_SYMBOL_TABLE_VISITOR_H_
 
 #include <unordered_map>
 #include <vector>
@@ -81,4 +81,4 @@ class SymbolTableVisitor : public ASTVisitor {
 
 }  // namespace mith
 
-#endif  // C442_SYMBOL_TABLE_VISITOR_H_
+#endif  // MITH_SYMBOL_TABLE_VISITOR_H_

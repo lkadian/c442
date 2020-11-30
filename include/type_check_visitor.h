@@ -1,5 +1,5 @@
-#ifndef C442_TYPE_CHECK_VISITOR_H
-#define C442_TYPE_CHECK_VISITOR_H_
+#ifndef MITH_TYPE_CHECK_VISITOR_H
+#define MITH_TYPE_CHECK_VISITOR_H_
 
 #include "ast_visitor.h"
 
@@ -52,4 +52,4 @@ class TypeCheckVisitor : public ASTVisitor {
 
 }  // namespace mith
 
-#endif  // C442_TYPE_CHECK_VISITOR_H_
+#endif  // MITH_TYPE_CHECK_VISITOR_H_

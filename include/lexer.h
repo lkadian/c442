@@ -1,5 +1,5 @@
-#ifndef C442_LEXER_H_
-#define C442_LEXER_H_
+#ifndef MITH_LEXER_H_
+#define MITH_LEXER_H_
 
 #include <fstream>
 #include <memory>
@@ -41,4 +41,4 @@ class Lexer {
 
 }  // namespace mith
 
-#endif  // C442_LEXER_H_
+#endif  // MITH_LEXER_H_

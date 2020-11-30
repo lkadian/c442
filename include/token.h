@@ -1,5 +1,5 @@
-#ifndef C442_TOKEN_H_
-#define C442_TOKEN_H_
+#ifndef MITH_TOKEN_H_
+#define MITH_TOKEN_H_
 
 #include <iostream>
 
@@ -94,4 +94,4 @@ enum class TokenType {
 
 }  // namespace mith
 
-#endif  // C442_TOKEN_H_
+#endif  // MITH_TOKEN_H_
