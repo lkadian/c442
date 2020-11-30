@@ -70,9 +70,9 @@ To run the tests:
 ./run_tests
 ```
 
-To run mith code:
+To run moon code:
 ```
-./mith file...
+./moon file...
 ```
 
 For example files see `test/fixtures`
