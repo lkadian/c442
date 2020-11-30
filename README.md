@@ -1,7 +1,5 @@
 # mith
 
-[![Build Status](https://travis-ci.org/lkadian/mith.svg?branch=master)](https://travis-ci.org/lkadian/mith)
-
 A compiler for a simple language with features like classes, inheritance, functions, recursion, integer types, arrays, console i/o.
 
 ## Implementation
