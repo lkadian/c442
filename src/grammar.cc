@@ -9,7 +9,7 @@
 
 namespace mith {
 
-static const std::string GRAMMAR_FILEPATH = "../conf/mith-ll1.g";
+static const std::string GRAMMAR_FILEPATH = "../etc/mith-ll1.g";
 
 std::string SymbolTypeToString(const SymbolType& type) {
   switch (type) {
