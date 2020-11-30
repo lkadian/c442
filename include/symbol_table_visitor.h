@@ -6,7 +6,7 @@
 
 #include "ast_visitor.h"
 
-namespace c442 {
+namespace mith {
 
 /**
  * Visitor to traverse the AST and create the program's symbol table.
@@ -79,6 +79,6 @@ class SymbolTableVisitor : public ASTVisitor {
   bool return_found_;
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_SYMBOL_TABLE_VISITOR_H_

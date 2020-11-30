@@ -4,7 +4,7 @@
 
 namespace pgentest {
 
-using namespace c442;
+using namespace mith;
 
 class ParserGenTest : public ::testing::Test {
  protected:

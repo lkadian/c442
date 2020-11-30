@@ -8,7 +8,7 @@
 #include <cstdio>
 #include <stdexcept>
 
-namespace c442 {
+namespace mith {
 namespace util {
 
 std::string ExeGeneratedCode() {
@@ -44,4 +44,4 @@ std::vector<std::string> SplitStrByNewline(const std::string& str) {
 };
 
 }  // namespace util
-}  // namespace c442
+}  // namespace mith

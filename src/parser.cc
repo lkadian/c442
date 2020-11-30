@@ -4,7 +4,7 @@
 
 #include "logger.h"
 
-namespace c442 {
+namespace mith {
 
 Parser::Parser(Lexer& lexer, const ParserGenerator& pgen)
     : lexer_(lexer), pgen_(pgen){};
@@ -189,4 +189,4 @@ void Parser::EndScopeResAction(std::string action) {
   }
 }
 
-}  // namespace c442
+}  // namespace mith

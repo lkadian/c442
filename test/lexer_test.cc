@@ -7,7 +7,7 @@
 
 namespace lexertest {
 
-using namespace c442;
+using namespace mith;
 
 class LexerTest : public ::testing::Test {
  protected:

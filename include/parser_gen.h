@@ -7,7 +7,7 @@
 
 #include "grammar.h"
 
-namespace c442 {
+namespace mith {
 
 namespace {
 typedef std::set<Symbol> Set;
@@ -50,6 +50,6 @@ class ParserGenerator {
   void ResolveDependencies(Symbol symb);
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_PARSER_GEN_H_

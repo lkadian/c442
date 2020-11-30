@@ -1,19 +1,18 @@
-# c442
+# mith
 
-[![Build Status](https://travis-ci.org/lkadian/c442.svg?branch=master)](https://travis-ci.org/lkadian/c442)
+[![Build Status](https://travis-ci.org/lkadian/mith.svg?branch=master)](https://travis-ci.org/lkadian/mith)
 
 A compiler for a simple language with features like classes, inheritance, functions, recursion, integer types, arrays, console i/o.
 
 ## Implementation
 
-Everything was implemented from scratch as part of a project for a compiler design course.
-
 | Phase             | Description                                                                                                                                                                          |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Lexing            | Converts the source file's character stream into a sequence of tokens, using the "hand-written" approach.                                                                            |
-| Parsing           | Implementation of an LL(1) parser generator which loads the grammar found in `conf` and creates a parsing table. The token stream is then parsed using this table, producing an AST. |
+| Parsing           | Implementation of an LL(1) parser generator which loads the grammar found in `conf` and creates a parsing table. The token stream is then parsed using this table, producing the AST. |
 | Semantic analysis | Several checks for semantic errors/warnings like undefined variables, multiple declarations, circular dependencies, etc. as well as type checking.                                   |
 | Code generation   | Generation of "moon" assembly code, which is to be executed by the Moon processor (virtual machine).                                                                                 |
+
 ## Example program
 
 ```
@@ -39,7 +38,7 @@ main
 ## Usage
 
 ```
-c442 [options] file...
+mith [options] file...
 
 -e, --exe   Execute the generated code after compilation.
 -h, --help  Display this information.
@@ -63,7 +62,7 @@ make
 
 To run the compiler:
 ```
-./c442 [options] file...
+./mith [options] file...
 ```
 
 To run the tests:
@@ -71,9 +70,9 @@ To run the tests:
 ./run_tests
 ```
 
-To run moon code:
+To run mith code:
 ```
-./moon file...
+./mith file...
 ```
 
 For example files see `test/fixtures`

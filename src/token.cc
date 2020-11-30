@@ -1,6 +1,6 @@
 #include "token.h"
 
-namespace c442 {
+namespace mith {
 
 Token::Token(TokenType type, std::string lexeme, int line)
     : type_(type), lexeme_(lexeme), line_(line) {}
@@ -139,4 +139,4 @@ inline std::string TokenTypeToString(const TokenType& type) {
   }
 };
 
-}  // namespace c442
+}  // namespace mith

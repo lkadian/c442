@@ -3,7 +3,7 @@
 
 #include "ast_visitor.h"
 
-namespace c442 {
+namespace mith {
 
 class TypeCheckVisitor : public ASTVisitor {
  public:
@@ -50,6 +50,6 @@ class TypeCheckVisitor : public ASTVisitor {
   void Visit(WriteNode& node) override;
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_TYPE_CHECK_VISITOR_H_

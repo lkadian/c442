@@ -5,7 +5,7 @@
 
 namespace asttest {
 
-using namespace c442;
+using namespace mith;
 
 class ASTTest : public ::testing::Test {
  protected:

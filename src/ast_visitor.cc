@@ -1,6 +1,6 @@
 #include "ast_visitor.h"
 
-namespace c442 {
+namespace mith {
 
 void ASTVisitor::DFS(ASTNode& node) {
   for (auto& child : node.Children()) {
@@ -8,4 +8,4 @@ void ASTVisitor::DFS(ASTNode& node) {
   }
 }
 
-}  // namespace c442
+}  // namespace mith

@@ -8,7 +8,7 @@
 #include "ast_visitor.h"
 #include "lexer.h"
 
-namespace c442 {
+namespace mith {
 
 ASTNode::ASTNode()
     : symtab(nullptr),
@@ -346,4 +346,4 @@ WriteNode::WriteNode() : ASTNode(){};
 void WriteNode::Accept(ASTVisitor& v) { v.Visit(*this); }
 std::string WriteNode::ToStr() const { return "write"; }
 
-}  // namespace c442
+}  // namespace mith

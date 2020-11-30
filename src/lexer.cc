@@ -3,7 +3,7 @@
 #include "logger.h"
 #include "token.h"
 
-namespace c442 {
+namespace mith {
 
 static const std::string OUT_TOKENS_FILEPATH = "../out/outlextokens";
 
@@ -387,4 +387,4 @@ void Lexer::LogToken(const Token& tk) {
   }
 }
 
-}  // namespace c442
+}  // namespace mith

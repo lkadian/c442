@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 
-namespace c442 {
+namespace mith {
 
 std::string ErrorType_to_string(ErrorType type) {
   switch (type) {
@@ -117,4 +117,4 @@ void Logger::Clear() {
   instance->warnings_.clear();
 }
 
-}  // namespace c442
+}  // namespace mith

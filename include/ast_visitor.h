@@ -3,7 +3,7 @@
 
 #include "ast.h"
 
-namespace c442 {
+namespace mith {
 
 class ASTVisitor {
  public:
@@ -54,6 +54,6 @@ class ASTVisitor {
   virtual void DFS(ASTNode& node);
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_AST_VISITOR_H_

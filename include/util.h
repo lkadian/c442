@@ -6,7 +6,7 @@
 #include <string>
 #include <vector>
 
-namespace c442 {
+namespace mith {
 namespace util {
 
 // Run the generated moon code and return the output.
@@ -42,6 +42,6 @@ void PPrintSet(const std::set<T> vec) {
 };
 
 }  // namespace util
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_UTIL_H_

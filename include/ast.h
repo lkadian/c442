@@ -5,7 +5,7 @@
 
 #include "symbol_table.h"
 
-namespace c442 {
+namespace mith {
 
 class ASTVisitor;
 
@@ -374,6 +374,6 @@ class WriteNode : public ASTNode {
   std::string ToStr() const override;
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_AST_H_

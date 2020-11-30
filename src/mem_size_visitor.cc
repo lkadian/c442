@@ -4,7 +4,7 @@
 
 #include "symbol_table.h"
 
-namespace c442 {
+namespace mith {
 
 MemSizeVisitor::MemSizeVisitor()
     : type_sizes_(), temp_var_counter(1), lit_val_counter(1){};
@@ -227,4 +227,4 @@ void MemSizeVisitor::Visit(VarDeclNode& node) { DFS(node); }
 void MemSizeVisitor::Visit(WhileNode& node) { DFS(node); }
 void MemSizeVisitor::Visit(WriteNode& node) { DFS(node); }
 
-}  // namespace c442
+}  // namespace mith

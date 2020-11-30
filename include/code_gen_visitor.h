@@ -6,10 +6,10 @@
 
 #include "ast_visitor.h"
 
-namespace c442 {
+namespace mith {
 
 /**
- * Visitor to traverse the AST and generate the moon code.
+ * Visitor to traverse the AST and generate the mith code.
  */
 class CodeGenVisitor : public ASTVisitor {
  public:
@@ -85,6 +85,6 @@ class CodeGenVisitor : public ASTVisitor {
   int GetOrNum();
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_CODE_GEN_VISITOR_H_

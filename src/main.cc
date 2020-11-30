@@ -13,11 +13,11 @@
 #include "type_check_visitor.h"
 #include "util.h"
 
-using namespace c442;
+using namespace mith;
 
 cxxopts::ParseResult ParseArgs(int argc, char* argv[]) {
   try {
-    cxxopts::Options options("c442");
+    cxxopts::Options options("mith");
     options.custom_help("[options]");
     options.positional_help("file...");
     options.add_options()("f, file", "Source code file [required]",

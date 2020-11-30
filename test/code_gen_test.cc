@@ -14,27 +14,27 @@ class CodeGenTest : public ::testing::Test {
  protected:
   CodeGenTest() {}
   virtual ~CodeGenTest() {}
-  virtual void SetUp() { c442::Logger::Clear(); }
+  virtual void SetUp() { mith::Logger::Clear(); }
   virtual void TearDown() {}
 };
 
 std::vector<std::string> CompileAndRunCode(std::string filepath) {
   std::ifstream prog_stream(filepath);
-  c442::Lexer lexer(prog_stream);
-  c442::Grammar grammar;
-  c442::ParserGenerator pgen(grammar);
-  c442::Parser parser(lexer, pgen);
+  mith::Lexer lexer(prog_stream);
+  mith::Grammar grammar;
+  mith::ParserGenerator pgen(grammar);
+  mith::Parser parser(lexer, pgen);
   auto ast = parser.Parse();
-  c442::SymbolTableVisitor symtab_visitor;
+  mith::SymbolTableVisitor symtab_visitor;
   ast->Accept(symtab_visitor);
-  c442::TypeCheckVisitor typecheck_visitor;
+  mith::TypeCheckVisitor typecheck_visitor;
   ast->Accept(typecheck_visitor);
-  c442::MemSizeVisitor memsize_visitor;
+  mith::MemSizeVisitor memsize_visitor;
   ast->Accept(memsize_visitor);
-  c442::CodeGenVisitor codegen_visitor;
+  mith::CodeGenVisitor codegen_visitor;
   ast->Accept(codegen_visitor);
-  std::string res_str = c442::util::ExeGeneratedCode();
-  auto res = c442::util::SplitStrByNewline(res_str);
+  std::string res_str = mith::util::ExeGeneratedCode();
+  auto res = mith::util::SplitStrByNewline(res_str);
   res.erase(res.begin());
   res.erase(res.end());
   return res;

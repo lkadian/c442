@@ -4,7 +4,7 @@
 
 #include "logger.h"
 
-namespace c442 {
+namespace mith {
 
 SymbolTable::SymbolTable(std::string name, std::shared_ptr<SymbolTable> parent,
                          int level)
@@ -39,7 +39,7 @@ void SymbolTable::RemoveMemberFunctionDefinitions() {
 
 // Get an entry for the given identifier by searching up
 // the chain of tables, starting from the current table
-std::shared_ptr<c442::Entry> SymbolTable::GetEntry(
+std::shared_ptr<mith::Entry> SymbolTable::GetEntry(
     const std::string& kind, const std::string& name) const {
   auto id = std::make_pair(kind, name);
   for (auto symtab = shared_from_this(); symtab != nullptr;
@@ -53,7 +53,7 @@ std::shared_ptr<c442::Entry> SymbolTable::GetEntry(
 
 // Get an entry for the given identifier by searching up
 // the chain of tables, starting from the current table
-std::shared_ptr<c442::Entry> SymbolTable::GetEntry(
+std::shared_ptr<mith::Entry> SymbolTable::GetEntry(
     const std::string& name) const {
   for (auto symtab = shared_from_this(); symtab != nullptr;
        symtab = symtab->parent_) {
@@ -425,4 +425,4 @@ void InheritEntry::Print(std::ostream& os) const {
   os << std::right << std::setw(40) << "|";
 }
 
-}  // namespace c442
+}  // namespace mith

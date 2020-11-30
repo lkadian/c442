@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-namespace c442 {
+namespace mith {
 
 // Forward declarations
 class Entry;
@@ -20,7 +20,7 @@ class ClassEntry;
 class InheritEntry;
 
 typedef std::map<std::pair<std::string, std::string>,
-                 std::shared_ptr<c442::Entry>>::iterator SymTabIt;
+                 std::shared_ptr<mith::Entry>>::iterator SymTabIt;
 
 class SymbolTable : public std::enable_shared_from_this<SymbolTable> {
  public:
@@ -43,9 +43,9 @@ class SymbolTable : public std::enable_shared_from_this<SymbolTable> {
   SymTabIt Begin();
   SymTabIt End();
 
-  std::shared_ptr<c442::Entry> GetEntry(const std::string& kind,
+  std::shared_ptr<mith::Entry> GetEntry(const std::string& kind,
                                         const std::string& name) const;
-  std::shared_ptr<c442::Entry> GetEntry(const std::string& name) const;
+  std::shared_ptr<mith::Entry> GetEntry(const std::string& name) const;
   void AddEntry(std::shared_ptr<LocalVarEntry> entry);
   void AddEntry(std::shared_ptr<MemberVarEntry> entry);
   void AddEntry(std::shared_ptr<FreeFuncEntry> entry);
@@ -63,7 +63,7 @@ class SymbolTable : public std::enable_shared_from_this<SymbolTable> {
   std::shared_ptr<SymbolTable> parent_;
   int mem_size_ = 0;
   // The key is (entryKind, entryId), the value is the entry.
-  std::map<std::pair<std::string, std::string>, std::shared_ptr<c442::Entry>>
+  std::map<std::pair<std::string, std::string>, std::shared_ptr<mith::Entry>>
       table_;
   // Helper set to check for overloaded functions.
   std::set<std::string> funcs_;
@@ -204,6 +204,6 @@ class InheritEntry : public Entry {
 };
 std::ostream& operator<<(std::ostream& os, const InheritEntry& entry);
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_SYMBOL_TABLE_H_

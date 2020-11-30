@@ -5,7 +5,7 @@
 
 #include "ast_visitor.h"
 
-namespace c442 {
+namespace mith {
 
 /**
  * Visitor to traverse the AST and calculates the memory to be allocated.
@@ -68,6 +68,6 @@ class MemSizeVisitor : public ASTVisitor {
   int lit_val_counter;
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_MEM_SIZE_VISITOR_H_

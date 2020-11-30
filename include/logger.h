@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 
-namespace c442 {
+namespace mith {
 
 enum class ErrorType { LEXING, SYNTAX, SEMANTIC };
 enum class WarningType { LEXING, SYNTAX, SEMANTIC };
@@ -36,6 +36,6 @@ class Logger {
   std::vector<std::pair<int, std::string>> warnings_;
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_LOGGER_H_

@@ -6,7 +6,7 @@
 #include "logger.h"
 #include "symbol_table.h"
 
-namespace c442 {
+namespace mith {
 
 namespace {
 bool IsClassType(const std::string& type) {
@@ -352,4 +352,4 @@ void SymbolTableVisitor::Visit(VarNode& node) { DFS(node); }
 void SymbolTableVisitor::Visit(WhileNode& node) { DFS(node); }
 void SymbolTableVisitor::Visit(WriteNode& node) { DFS(node); }
 
-}  // namespace c442
+}  // namespace mith

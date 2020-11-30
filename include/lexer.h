@@ -6,7 +6,7 @@
 
 #include "token.h"
 
-namespace c442 {
+namespace mith {
 
 /**
  * Extracts tokens from an input stream.
@@ -39,6 +39,6 @@ class Lexer {
   void LogToken(const Token& tk);
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_LEXER_H_

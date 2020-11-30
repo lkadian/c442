@@ -5,7 +5,7 @@
 
 #include "util.h"
 
-namespace c442 {
+namespace mith {
 
 ParserGenerator::ParserGenerator(const Grammar& grammar) : grammar_(grammar) {
   CalculateSets();
@@ -242,4 +242,4 @@ void ParserGenerator::ResolveDependencies(Symbol symb) {
   }
 }
 
-}  // namespace c442
+}  // namespace mith

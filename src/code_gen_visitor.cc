@@ -7,7 +7,7 @@
 #include "symbol_table.h"
 #include "util.h"
 
-namespace c442 {
+namespace mith {
 
 CodeGenVisitor::CodeGenVisitor()
     : exec_code_(),
@@ -824,4 +824,4 @@ CodeGenVisitor::InitProcedureMap() {
   return m;
 }
 
-}  // namespace c442
+}  // namespace mith

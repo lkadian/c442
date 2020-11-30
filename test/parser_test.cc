@@ -6,7 +6,7 @@
 
 namespace parsertest {
 
-using namespace c442;
+using namespace mith;
 
 class ParserTest : public ::testing::Test {
  protected:

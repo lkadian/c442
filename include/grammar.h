@@ -9,7 +9,7 @@
 
 #include "token.h"
 
-namespace c442 {
+namespace mith {
 
 // The grammar format with added semantic actions is as follows:
 // - Terminal symbols are surrounded by ' '
@@ -77,6 +77,6 @@ class Grammar {
 };
 std::ostream& operator<<(std::ostream& os, const Grammar& grm);
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_GRAMMAR_H_

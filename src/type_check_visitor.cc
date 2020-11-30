@@ -3,7 +3,7 @@
 #include "logger.h"
 #include "symbol_table.h"
 
-namespace c442 {
+namespace mith {
 
 bool IsClassType(const std::string& type) {
   return type != "integer" && type != "float" && type != "typeerror";
@@ -327,4 +327,4 @@ void TypeCheckVisitor::Visit(VarDeclListNode& node) { DFS(node); }
 void TypeCheckVisitor::Visit(WhileNode& node) { DFS(node); }
 void TypeCheckVisitor::Visit(WriteNode& node) { DFS(node); }
 
-}  // namespace c442
+}  // namespace mith

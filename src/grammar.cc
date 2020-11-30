@@ -7,9 +7,9 @@
 
 #include "util.h"
 
-namespace c442 {
+namespace mith {
 
-static const std::string GRAMMAR_FILEPATH = "../conf/c442-ll1.g";
+static const std::string GRAMMAR_FILEPATH = "../conf/mith-ll1.g";
 
 std::string SymbolTypeToString(const SymbolType& type) {
   switch (type) {
@@ -152,4 +152,4 @@ std::ostream& operator<<(std::ostream& os, const Grammar& grm) {
   return os;
 }
 
-}  // namespace c442
+}  // namespace mith

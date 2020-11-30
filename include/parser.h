@@ -9,7 +9,7 @@
 #include "parser_gen.h"
 #include "token.h"
 
-namespace c442 {
+namespace mith {
 
 /**
  *  LL(1) parser.
@@ -44,6 +44,6 @@ class Parser {
   void EndScopeResAction(std::string action);
 };
 
-}  // namespace c442
+}  // namespace mith
 
 #endif  // C442_PARSER_H_

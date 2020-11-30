@@ -11,21 +11,21 @@ class SemanticTest : public ::testing::Test {
  protected:
   SemanticTest() {}
   virtual ~SemanticTest() {}
-  virtual void SetUp() { c442::Logger::Clear(); }
+  virtual void SetUp() { mith::Logger::Clear(); }
   virtual void TearDown() {}
 };
 
 // Lex, parse and detect semantic errors for the given file
 void SemanticTestHelper(const std::string& filepath) {
   std::ifstream prog_stream(filepath);
-  c442::Lexer lexer(prog_stream);
-  c442::Grammar grammar;
-  c442::ParserGenerator pgen(grammar);
-  c442::Parser parser(lexer, pgen);
+  mith::Lexer lexer(prog_stream);
+  mith::Grammar grammar;
+  mith::ParserGenerator pgen(grammar);
+  mith::Parser parser(lexer, pgen);
   auto ast = parser.Parse();
-  c442::SymbolTableVisitor symtab_visitor;
+  mith::SymbolTableVisitor symtab_visitor;
   ast->Accept(symtab_visitor);
-  c442::TypeCheckVisitor typecheck_visitor;
+  mith::TypeCheckVisitor typecheck_visitor;
   ast->Accept(typecheck_visitor);
 }
 
@@ -42,14 +42,14 @@ TEST_F(SemanticTest, TestSemantic1) {
        "'build' (line 54) \n",
        "SemanticError: Variable 'f1' already declared in scope 'main' (line "
        "78) \n"});
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
 
   EXPECT_EQ(expected_errors, actual_errors);
 
   std::vector<std::string> expected_warnings(
       {"SemanticWarning: Shadowed member variable 'z' in 'QUADRATIC' already "
        "declared in 'POLYNOMIAL' (line 3) \n"});
-  std::vector<std::string> actual_warnings = c442::Logger::GetWarnings();
+  std::vector<std::string> actual_warnings = mith::Logger::GetWarnings();
   EXPECT_EQ(expected_warnings, actual_warnings);
 }
 
@@ -66,7 +66,7 @@ TEST_F(SemanticTest, TestSemantic2) {
        "definition (line 9) \n",
        "SemanticError: Definition provided for undeclared member function "
        "'LINEAR::evaluate(float)' (line 13) \n"});
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
 
   EXPECT_EQ(expected_errors, actual_errors);
 }
@@ -87,7 +87,7 @@ TEST_F(SemanticTest, TestSemantic3) {
       "SemanticError: Variable 'f2' already declared in scope 'main' (line 88) "
       "\n",
   });
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
 
   EXPECT_EQ(expected_errors, actual_errors);
 }
@@ -105,7 +105,7 @@ TEST_F(SemanticTest, TestSemantic4) {
        "'global' (line 49) \n",
        "SemanticWarning: Overloaded function '::fun1(integer, integer)' in "
        "'global' (line 79) \n"});
-  std::vector<std::string> actual_warnings = c442::Logger::GetWarnings();
+  std::vector<std::string> actual_warnings = mith::Logger::GetWarnings();
 
   EXPECT_EQ(expected_warnings, actual_warnings);
 }
@@ -120,7 +120,7 @@ TEST_F(SemanticTest, TestSemantic4) {
 TEST_F(SemanticTest, TestSemantic5) {
   SemanticTestHelper("../test/fixtures/semantic/Test5.src");
   std::vector<std::string> expected_errors({});
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 // expect errors
@@ -137,7 +137,7 @@ TEST_F(SemanticTest, TestSemantic6) {
        "operation (line 16) \n",
        "SemanticError: Mismatching types 'float' and 'typeerror' in assign "
        "operation (line 16) \n"});
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 
@@ -156,7 +156,7 @@ TEST_F(SemanticTest, TestSemantic7) {
        "integer)' (line 47) \n",
        "SemanticError: Mismatching types 'float' and 'typeerror' in assign "
        "operation (line 47) \n"});
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 
@@ -175,7 +175,7 @@ TEST_F(SemanticTest, TestSemantic8) {
        "SemanticError: Use of undeclared free function '::add(integer, "
        "integer)' (line 53) \n"});
 
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 
@@ -196,7 +196,7 @@ TEST_F(SemanticTest, TestSemantic9) {
        "SemanticError: Use of undeclared free function "
        "'::bubbleSort(typeerror, integer)' (line 69) \n"});
 
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 
@@ -208,7 +208,7 @@ TEST_F(SemanticTest, TestSemantic10) {
       {"SemanticError: Cyclic class dependency detected from class "
        "QUADRATIC\n"});
 
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 
@@ -241,7 +241,7 @@ TEST_F(SemanticTest, TestSemantic11) {
 
       });
 
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 
@@ -264,7 +264,7 @@ TEST_F(SemanticTest, TestSemantic12) {
        "SemanticError: Mismatching types 'QUADRATIC' and 'float' in assign "
        "operation (line 81) \n"});
 
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 
@@ -275,7 +275,7 @@ TEST_F(SemanticTest, TestSemantic13) {
       {"SemanticError: Cyclic class dependency detected from class "
        "QUADRATIC\n"});
 
-  std::vector<std::string> actual_errors = c442::Logger::GetErrors();
+  std::vector<std::string> actual_errors = mith::Logger::GetErrors();
   EXPECT_EQ(expected_errors, actual_errors);
 }
 
