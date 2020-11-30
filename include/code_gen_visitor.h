@@ -9,7 +9,7 @@
 namespace mith {
 
 /**
- * Visitor to traverse the AST and generate the mith code.
+ * Visitor to traverse the AST and generate the moon code.
  */
 class CodeGenVisitor : public ASTVisitor {
  public:
